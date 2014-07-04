@@ -10,7 +10,7 @@
 
 .hero-unit {
   @include outer-container;
-  height: 800px;
+  height: 700px;
   @include border;
   #title {
     @include span-columns(12);
@@ -21,7 +21,7 @@
   #hipsterpic {
     @include span-columns(3);
     background-color: green;
-    height: 300px;
+    height: 600px;
 
   }
   #surveybox {
@@ -43,11 +43,50 @@
   #redneckpic {
     @include span-columns(3);
     background-color: blue;
-    height: 300px;
+    height: 600px;
   }
   h1 {
     font-size: 60px;
     line-height: 1;
     letter-spacing: -1px;
   }
+}
+.redneck-unit {
+  @include outer-container;
+  height: 700px;
+  background-color: green;
+  display: none;
+  #gameleft {
+    @include span-columns(5);
+    height: 150px;
+    border: 1px solid black; 
+    .attack {
+      @include button(shiny, #ff0000);
+    }
+  }
+  #healthright {
+    @include span-columns(5);
+    height: 150px;
+    border: 1px solid black; 
+  }
+  #track {
+    @include span-columns(12);
+    height: 100px;
+    background-color: red;
+    margin-top: 200px;
+    #lawnmower {
+      height: 100px;
+      width: 100px;
+      background-color: black;
+    }
+    #lawnmower.activeone {
+      margin-left: 700px; 
+    }
+  }
+}
+.hipster-unit {
+  @include outer-container;
+  height: 700px;
+  background-color: blue;
+  display: none;
 }

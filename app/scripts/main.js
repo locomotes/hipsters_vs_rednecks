@@ -1,6 +1,6 @@
 
 
-$('form').on('submit', function(e) {
+$('.formone').on('submit', function(e) {
 	e.preventDefault();
 	var redneck = 0;
 	var hipster = 0;
@@ -15,11 +15,20 @@ $('form').on('submit', function(e) {
 
 			if (redneck > hipster) {
 				alert("YOU'RE A REDNECK");
-				$(".#surveybox").hide();
+				$('.hero-unit').fadeOut('slow', function() {
+					$('.redneck-unit').fadeIn('slow');
+				});
 			} else {
 				alert("YOU'RE A HIPSTER");
+				$('.hero-unit').fadeOut('slow', function() {
+				$('.hipster-unit').fadeIn('slow');
+				});
 			}
+
+	
 
 });
 
-var redgame = $(".#surveybox").hide();
+$('.attack').on('click', function() {
+		$('#lawnmower').toggleClass('activeone');
+	});
