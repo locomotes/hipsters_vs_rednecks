@@ -29,6 +29,19 @@ $('.formone').on('submit', function(e) {
 
 });
 
+var health = $('#healthright');
+
 $('.attack').on('click', function() {
 		$('#lawnmower').toggleClass('activeone');
-	});
+		var damage = _.random(10, 40);
+		var hipsterhealth = health.find('input').val();
+		var newhealth = function (a) {
+			a.hipsterhealth -= damage;
+			console.log(newhealth);
+		};
+		
+		
+
+
+});
+// console.log(hipsterhealth);
