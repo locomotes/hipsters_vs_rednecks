@@ -7,28 +7,37 @@
 @mixin border{
   border: 1px solid red;
 }
+body {
+  background-color: black;
+}
 
 .hero-unit {
   @include outer-container;
   height: 700px;
-  @include border;
   #title {
     @include span-columns(12);
     height: 100px;
-    background-color: yellow;
     text-align: center;
+    color: white;
   }
   #hipsterpic {
-    @include span-columns(3);
-    background-color: green;
+    @include span-columns(4);
+    background-color: blue;
     height: 600px;
-
+    border-radius: 50px;
+    text-align: center;
+    .hipgif {
+      width: 320px;
+      border-radius: 75px;
+      margin-top: 10px;
+    }
   }
   #surveybox {
-    @include span-columns(6);
-    background-color: orange;
+    @include span-columns(4);
+    background-color: red;
     height: 600px;
     text-align: center;
+    border-radius: 50px;
     h2 {
       text-align: center;
     }
@@ -41,9 +50,16 @@
     }
   }
   #redneckpic {
-    @include span-columns(3);
+    @include span-columns(4);
     background-color: blue;
     height: 600px;
+    border-radius: 50px;
+    text-align: center;
+    .redgif {
+      width: 320px;
+      border-radius: 75px;
+      margin-top: 10px;
+    }
   }
   h1 {
     font-size: 60px;
@@ -79,18 +95,24 @@
   #track {
     @include span-columns(12);
     height: 100px;
-    background-color: red;
-    margin-top: 200px;
+    margin-top: 50px;
     #lawnmower {
       height: 100px;
       width: 100px;
-      background-color: black;
+      float: left; 
     }
     #lawnmower.activeone {
       margin-left: 700px; 
     }
+    #hipster {
+      height: 200px;
+      width: 200px;
+      float: left;
+      margin-left: 800px;
+    }
   }
 }
+
 .hipster-unit {
   @include outer-container;
   height: 700px;
